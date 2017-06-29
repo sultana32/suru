@@ -1,0 +1,35 @@
+.scs-col4-boxes{
+	width:30%;
+	
+	
+	height: 176px;
+	
+	
+	
+	float:left;
+	
+	
+}
+
+.circle-scs-fourth{
+	border-radius: 50%;
+	background: #FFFFFF;
+	background-repeat: no-repeat;
+	background-position:center;
+	width: 50px;
+    height: 50px;
+	margin:40px 0px 0px 0px;
+	float:left;
+}
+.day{
+	background-image: url("dayicon.png");
+
+}
+.distance{
+	background-image: url("distanceicon.png");
+	background-position:center;
+}
+.motor{
+	background-image: url("motor.png");
+	background-position:center;
+}

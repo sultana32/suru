@@ -1,0 +1,70 @@
+#gs_upper_bind_box{
+	width:100%;
+	background-color:#335a77;
+	height: 100%;
+	margin-bottom:25px;
+	float:left;
+}
+
+#gs_total_summary_box{
+	width:75%;
+	background-color:#1c3e59;
+	color:white;
+	font-size: 12px;
+	font-family: Georgia, serif;
+	text-align:center;
+	height: 176px;
+	border: 2px solid #1c3e59;
+	border-radius:5px;
+	padding-left:15px;
+	border-radius:5px 5px 5px 5px;
+	margin-right:10px;
+	float:left;
+	
+}
+
+#gs_calender_box{
+	width:23%;
+	background-color:#1c3e59;
+	color:white;
+	font-size: 12px;
+	font-family: Georgia, serif;
+	text-align:center;
+	height: 176px;
+	border: 2px solid #4989bc;
+	border-radius:5px;
+	padding-left:15px;
+	border-radius:5px 5px 5px 5px;
+	float:left;
+}
+.gs_label_box{
+	width:98%;
+	background-color:#1c3e59;
+	color:white;
+	font-size: 12px;
+	font-family: Georgia, serif;
+	text-align:center;
+	height: 40px;
+	margin-bottom:15px;
+	border-radius:5px;
+	padding-left:15px;
+	border-radius:5px 5px 5px 5px;
+	float:left;
+}
+
+.gs_graph_box{
+width:48%;
+	background-color:#1c3e59;
+	color:white;
+	font-size: 12px;
+	font-family: Georgia, serif;
+	text-align:center;
+	height: 250px;
+	
+	border-radius:5px;
+	padding-left:15px;
+	margin-right:15px;
+	border-radius:5px 5px 5px 5px;
+	float:left;
+
+}

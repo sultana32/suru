@@ -1,0 +1,30 @@
+.leftbutton {
+
+   border: 0px solid rgba(0,0,0,0.3);
+   border-radius: 1px 10px 10px 1px;
+   height:100%;
+   width: 95%;
+   color: white;
+   font-size: 14px;
+   font-family: Georgia, serif;
+   padding: 5px;
+   text-decoration: none;
+   float:left;
+   
+}
+.leftbutton:hover {
+  border: 0px solid rgba(0,0,0,0.3);
+   
+   color: #ccc;
+   }
+.leftbutton:active {
+ border: 0px solid rgba(0,0,0,0.3);
+
+   border-radius: 1px 10px 0px 0px;
+  
+  
+   }
+.leftbutton, .leftbutton:focus{ outline: none !important;
+
+ }
+

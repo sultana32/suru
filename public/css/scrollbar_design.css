@@ -1,0 +1,32 @@
+.scrollbar{
+width:100%;
+height:100%;
+ background: inherit;
+
+overflow-y:scroll;
+float:left;
+}
+#ex3::-webkit-scrollbar{
+width:5px;
+ background:  inherit;
+} 
+
+#ex3::-webkit-scrollbar-thumb{
+ background:  inherit;
+border-radius:1px;
+}
+
+#ex3::-webkit-scrollbar-thumb:hover{
+ background:  inherit;
+border:1px solid #24455e;
+}
+#ex3::-webkit-scrollbar-thumb:active{
+ background:  inherit;
+border:1px solid rgba(0,0,0,0.5);
+} 
+
+#ex3::-webkit-scrollbar-track{
+border:1px rgba(0,0,0,0.5) solid;
+
+-webkit-box-shadow:0 0 6px  inherit inset;
+} 

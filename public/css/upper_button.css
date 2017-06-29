@@ -1,0 +1,25 @@
+.upperbutton 
+{
+   height:100%;
+   width: 100%;
+   background: #2f6175;
+   border: 2px solid #2f6175;
+   border-radius: 15px 15px 1px 1px;
+   padding: 5px;
+   color:#D6DDE1;
+   font-size: 16px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+  display:inline;
+}
+.upperbutton:hover {
+   background: #1b465f;
+   color: #ccc;
+}
+.upperbutton:active {
+   background: #1b465f;
+   color: #ccc;
+}
+.upperbutton, .upperbutton:focus{ outline: none !important;
+
+ }

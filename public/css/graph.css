@@ -1,0 +1,87 @@
+circle {
+  }
+#white{
+	stroke: transparent;
+	stroke-width: 6px;
+    fill: white;
+}
+#white-cs-col3{
+	stroke: transparent;
+  stroke-width: 10px;
+   fill: white;
+}
+#gray{
+  stroke:#164E5E;
+  stroke-width: 6px;
+   fill: transparent;
+}
+
+#gray-cs-col3{
+  stroke:#0c2630;
+  stroke-width: 10px;
+   fill: transparent;
+}
+
+#gray-scs-col3{
+  stroke:#0c2630;
+  stroke-width: 8px;
+   fill: transparent;
+}
+
+#yellow-cs-col3{
+  stroke:yellow;
+  stroke-width: 10px;
+   fill: transparent;
+   stroke-dasharray: 51, 264;
+}
+#yellow{
+  stroke:yellow;
+  stroke-width: 6px;
+   fill: transparent;
+   stroke-dasharray: 100, 214;
+}
+#green{
+  stroke: #07c33a;
+  stroke-dasharray: 20, 294; /* length of arc, circumference of circle */
+  stroke-width: 6px;
+   fill: transparent;
+  
+}
+#red{
+  stroke: red;
+  stroke-dasharray: 20, 294; /* length of arc, circumference of circle */
+  stroke-width: 6px;
+   fill: transparent;
+  
+}
+
+#red-cs-col3{
+  stroke: red;
+  stroke-dasharray: 79.5, 240; /* length of arc, circumference of circle */
+  stroke-width: 10px;
+   fill: transparent;
+  
+}
+
+#red-scs-col3{
+  stroke: red;
+  stroke-dasharray: 79.5, 240; /* length of arc, circumference of circle */
+  stroke-width: 8px;
+   fill: transparent;
+  
+}
+#orange{
+  stroke: orange;
+  stroke-dasharray: 35.5, 284; /* length of arc, circumference of circle */
+  stroke-dashoffset: -88.75; /* offset of arc from start point (1/2 arc length + 1/4 circumference) */
+}
+#blue{
+  stroke: blue;
+  stroke-dasharray: 35.5, 284; /* length of arc, circumference of circle */
+  stroke-dashoffset: -17.75; /* offset of  arc from start point (1/2 of arc length) */
+}
+#green{
+  stroke: green;
+  stroke-dasharray: 35.5, 284; /* length of arc, circumference of circle */
+  stroke-dashoffset: -230.75; /* offset of arc from start point (1/2 arc length + 3/4 circumference) */
+}
