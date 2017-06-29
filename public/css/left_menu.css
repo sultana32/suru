@@ -1,0 +1,71 @@
+.left-menu-single-button-box{
+		width:100%;
+		margin-top:15px;
+		border-radius: 1px 10px 1px 1px;
+		float:left;
+		height: 60px;
+}
+.left-menu-button-inside-tiny_box{
+		width:4%;
+		background-color:#007FFF;
+		height: 100%;
+		border: 1px solid #007FFF;
+		border-radius:0px 5px 5px 0px;
+		float:left;
+}
+.left-menu-button-inside-tiny_box2{
+		width:4%;
+		background-color:#24455e;
+		height: 100%;
+		border: 2px solid #007FFF;
+		border-radius:0px 5px 5px 0px;
+		float:left;
+}
+.collapse-box{
+		width:100%;
+		background: rgba(0,0,0,0.3);
+   
+   border: 0px solid rgba(0,0,0,0.15);
+		padding:5px 0px 10px 0px;
+		
+		 border-radius: 0px 0px 15px 15px;
+		float:left;
+		height:180px;
+		
+}
+
+.checkbox-box{
+		width:18%;
+		background: inherit;
+		float:left;
+		height: 100%;
+
+}
+.option-box{
+		width:80%;
+		background: inherit;
+		padding-top:3px;
+		padding-left:5px;
+		color: white;
+		text-align: justify;
+		line-height: 32px;
+		font-size: 100%;
+		float:left;
+		height: 100%;
+
+}
+
+.option-box1{
+		width:80%;
+		background-color: #24455e;
+		padding-top:3px;
+		padding-left:5px;
+		color: white;
+		text-align: justify;
+		line-height: 32px;
+		font-size: 100%;
+		float:left;
+		height: 100%;
+
+}
+

@@ -1,7 +1,7 @@
 {
   "name" : "blog",
   "version" : "0.0.1",
-  "description" : "My minimalistic blog",
+  "description" : "General Dynamics",
   "dependencies" : {
     "mime" : "~1.2.7"
   }
