@@ -20,7 +20,7 @@ input[type=checkbox] {
 	position: absolute;
 	top: 5px;
 	left: 5px;
-	z-index: 1;
+	
 	background:#24455e;
 }
 .circular-checkbox  label:after {

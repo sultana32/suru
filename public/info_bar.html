@@ -13,11 +13,16 @@
 	
 	</div>
 	<div id="third_bar_box5">
-	<span ng-repeat="p in choice">
-    <div class="small_choice_box">{{p[0]}} 
-	<span ng-click="removeItem($index)">&times;</span>
-	</div>
-</span>
+		
+		<div class="small_choice_box" ng-hide="resetAllFlag">Reset all 
+				<span style="float:center-right;font-weight:400%;"ng-click="removeResetAll()"><span class="glyphicon glyphicon-remove"></span>
+		</div>
+		
+		<span ng-repeat="p in choice">
+			<div class="small_choice_box">{{p[0]}} 
+				<span style="float:center-right;font-weight:400%;"ng-click="removeItem($index)"><span class="glyphicon glyphicon-remove"></span>
+			</div>
+		</span>
 	
 	</div>
 </div>

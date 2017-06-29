@@ -1,42 +1,32 @@
 <div class="left-menu-single-button-box" ng-style="{'background': 'rgba(0,0,0,'+ (boxColor[1]/ 100) +')'}">
 	<div class="left-menu-button-inside-tiny_box" ng-style="{'background-color':btnSelection[1]}"> </div>
 	
-	<button class="leftbutton"  ng-click="myFunc(1)" ng-style="{'background': 'rgba(0,0,0,'+ (btnColor[1]/ 100) +')'}"><span class="glyphicon glyphicon-search" style="display:inline-block; width: 30px;" ng-hide="showMe1">
-	</span>{{toggleText}}</button>
+	<button class="leftbutton"  ng-click="myFunc(1)" ng-style="{'background': 'rgba(0,0,0,'+ (btnColor[1]/ 100) +')'}"><span class="glyphicon glyphicon-search" style="display:inline-block; width: 30px;" ng-hide="showCollapse[1]">
+	</span>{{toggleText[1]}}
+	<div class="hrline" ng-hide="showCollapse[1]"> </div>
+	</button>
 </div>
 
-<div class="collapse-box" ng-hide="showMe1" >
+<div class="collapse-box" ng-hide="showCollapse[1]" >
 	<div class="checkbox-box">
 	
 		<form>
+			
 			<div class="circular-checkbox">
-				<input type="checkbox" value="checking00" id="checkboxFourInput0" name="" ng-model="checkboxModel[0]" ng-click="isSelected(0)"/>
-				<label for="checkboxFourInput00"></label>
-			</div>
-			<div class="circular-checkbox">
-				<input type="checkbox" value="checking01" id="checkboxFourInput01" name="" ng-model="checkboxModel[1]" ng-click="isSelected(1)"/>
+				<input type="checkbox" value="checking01" id="checkboxFourInput01" name="" />
 				<label for="checkboxFourInput01"></label>
 			</div>
 			<div class="circular-checkbox">
-				<input type="checkbox" value="checking02" id="checkboxFourInput02" name="" ng-model="checkboxModel[2]" ng-click="isSelected(2)"/>
+				<input type="checkbox" value="checking02" id="checkboxFourInput02" name="" />
 				<label for="checkboxFourInput02"></label>
 			</div>
 			<div class="circular-checkbox">
-				<input type="checkbox" value="checking03" id="checkboxFourInput03" name="" ng-model="checkboxModel[3]" ng-click="isSelected(3)"/>
+				<input type="checkbox" value="checking03" id="checkboxFourInput03" name="" />
 				<label for="checkboxFourInput03"></label>
 			</div>
 			
 		</form>
 	</div>
-	
-	
-		<div class="option-box">
-		{{items[0]}}<br>
-		{{items[1]}}<br>
-		{{items[2]}}<br>
-		{{items[3]}}<br>
-	</div>
-		
 	
 	
 </div>
@@ -48,9 +38,12 @@
 
 <div class="left-menu-single-button-box" ng-style="{'background': 'rgba(0,0,0,'+ (boxColor[2]/ 100) +')'}">
 	<div class="left-menu-button-inside-tiny_box" ng-style="{'background-color':btnSelection[2]}"> </div>
-	<button class="leftbutton"  ng-click="myFunc(2)" ng-style="{'background': 'rgba(0,0,0,'+ (btnColor[2]/ 100) +')'}">Choose Base</button>
+	<button class="leftbutton"  ng-click="myFunc(2)" ng-style="{'background': 'rgba(0,0,0,'+ (btnColor[2]/ 100) +')'}"><span class="glyphicon glyphicon-search" style="display:inline-block; width: 30px;" ng-hide="showCollapse[2]">
+	</span>{{toggleText[2]}}
+	<div class="hrline" ng-hide="showCollapse[2]"> </div>
+	</button>
 </div>
-<div class="collapse-box" ng-hide="showMe2">
+<div class="collapse-box" ng-hide="showCollapse[2]">
 	<div class="checkbox-box">
 		<form>
 			<div class="circular-checkbox">
@@ -72,10 +65,10 @@
 		</form>
 	</div>
 	<div class="option-box">
-		{{items[4]}}<br>
-		{{items[5]}}<br>
-		{{items[6]}}<br>
-		{{items[7]}}<br>
+		Basecamp 1<br>
+		Basecamp 2<br>
+		Basecamp 3<br>
+		Basecamp 4<br>
 	</div>
 </div>
 
@@ -83,15 +76,15 @@
 	<div class="left-menu-button-inside-tiny_box" ng-style="{'background-color':btnSelection[3]}"> </div>
 	<button class="leftbutton"  ng-click="myFunc(3)" ng-style="{'background': 'rgba(0,0,0,'+ (btnColor[3]/ 100) +')'}">Choose vehicle position</button>
 </div>
-<div class="collapse-box" ng-hide="showMe3">
+<div class="collapse-box" ng-hide="showCollapse[3]">
 	<div class="checkbox-box">
 		<form>
 			<div class="circular-checkbox">
-				<input type="checkbox" value="checking31" id="checkboxFourInput31" name="" />
+				<input type="checkbox" value="checking31" id="checkboxFourInput31" name="" ng-model="checkboxModel[8]" ng-click="isSelected(8)"/>
 				<label for="checkboxFourInput31"></label>
 			</div>
 			<div class="circular-checkbox">
-				<input type="checkbox" value="checking32" id="checkboxFourInput32" name="" />
+				<input type="checkbox" value="checking32" id="checkboxFourInput32" name="" ng-model="checkboxModel[9]" ng-click="isSelected(9)" />
 				<label for="checkboxFourInput32"></label>
 			</div>
 			
@@ -106,7 +99,7 @@
 	<div class="left-menu-button-inside-tiny_box" ng-style="{'background-color':btnSelection[4]}"> </div>
 	<button class="leftbutton"  ng-click="myFunc(4)" ng-style="{'background': 'rgba(0,0,0,'+ (btnColor[4]/ 100) +')'}">Choose estimated mission time range</button>
 </div>
-<div class="collapse-box" ng-hide="showMe4">
+<div class="collapse-box" ng-hide="showCollapse[4]">
 	<form>
 	<div ng-controller="myCtrl">
 	
@@ -130,23 +123,23 @@
 	<div class="left-menu-button-inside-tiny_box" ng-style="{'background-color':btnSelection[5]}"> </div>
 	<button class="leftbutton"  ng-click="myFunc(5)" ng-style="{'background': 'rgba(0,0,0,'+ (btnColor[5]/ 100) +')'}">Choose critical status</button>
 </div>
-<div class="collapse-box" ng-hide="showMe5">
+<div class="collapse-box" ng-hide="showCollapse[5]">
 	<div class="checkbox-box">
 		<form>
 			<div class="circular-checkboxr">
-				<input type="checkbox" value="checking51" id="checkboxFourInput51" name="" />
+				<input type="checkbox" value="checking51" id="checkboxFourInput51" name="" ng-model="checkboxModel[10]" ng-click="isSelected(10)"/>
 				<label for="checkboxFourInput51"></label>
 			</div>
 			<div class="circular-checkboxo">
-				<input type="checkbox" value="checking52" id="checkboxFourInput52" name="" />
+				<input type="checkbox" value="checking52" id="checkboxFourInput52" name="" ng-model="checkboxModel[11]" ng-click="isSelected(11)"/>
 				<label for="checkboxFourInput52"></label>
 			</div>
 			<div class="circular-checkboxy">
-				<input type="checkbox" value="checking53" id="checkboxFourInput53" name="" />
+				<input type="checkbox" value="checking53" id="checkboxFourInput53" name="" ng-model="checkboxModel[12]" ng-click="isSelected(12)"/>
 				<label for="checkboxFourInput53"></label>
 			</div>
 			<div class="circular-checkboxp">
-				<input type="checkbox" value="checking54" id="checkboxFourInput54" name="" />
+				<input type="checkbox" value="checking54" id="checkboxFourInput54" name="" ng-model="checkboxModel[13]" ng-click="isSelected(13)"/>
 				<label for="checkboxFourInput54"></label>
 			</div>
 		</form>
@@ -163,7 +156,7 @@
 	<div class="left-menu-button-inside-tiny_box" ng-style="{'background-color':btnSelection[6]}"> </div>
 	<button class="leftbutton"  ng-click="myFunc(6)" ng-style="{'background': 'rgba(0,0,0,'+ (btnColor[6]/ 100) +')'}">Choose brigade</button>
 </div>
-<div class="collapse-box" ng-hide="showMe6">
+<div class="collapse-box" ng-hide="showCollapse[6]">
 	<form>
 		<div class="circular-checkbox">
 			<input type="checkbox" value="checking61" id="checkboxFourInput61" name="" />

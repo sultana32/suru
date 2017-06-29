@@ -1,73 +1,149 @@
 var app = angular.module('myApp', ['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
 app.controller('myCtrl', function($scope) {
-    $scope.showMe1 = true;
-	$scope.showMe2 = true;
-	$scope.showMe3 = true;
-	$scope.showMe4 = true;
-	$scope.showMe5 = true;
-	$scope.showMe6 = true;
+   
 	
+	$scope.showCollapse=[true,true,true,true,true,true,true]
 	$scope.btnColor=[30,30,30,30,30,30,30];
 	$scope.boxColor=[.01,.01,.01,.01,.01,.01,.01];
-	
 	$scope.btnSelection=['inherit','inherit','inherit','inherit','inherit','inherit','inherit'];
 	$scope.myButton=['#1b465f','#2f6175','#2f6175','#2f6175'];
 	$scope.showCommand=false;
 	$scope.showSubcommand=true;
-	$scope.toggleText="Choose vehicle ID";
-	
-	
-	$scope.items = ['Inf','Arnb','Mor','Duro','basecamp 1','basecamp 2','basecamp 3','basecamp 4','inside','outside','critical','major','minor','warning','brigade 1','brigade 2'];
+	$scope.toggleText=["demo","Choose vehicle ID","Choose location"];
+	$scope.items = ['Inf','Arnb','Mor','Duro','basecamp 1','basecamp 2','basecamp 3','basecamp 4','Position:inside','Position:outside','status:critical','status:major','status:minor','status:warning'];
 	$scope.choice=[];
 	$scope.checkboxModel = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
-        
+    $scope.resetAllFlag=true;
    
-	
-	
 	$scope.isSelected=function(pos){
 			
-			var ind=-1;
-			for(var i=0;i<$scope.choice.length;i++)
+		
+		var ind=-1;
+		for(var i=0;i<$scope.choice.length;i++)
+		{
+			if($scope.choice[i][0]==$scope.items[pos])
 			{
-				if($scope.choice[i][0]==$scope.items[pos])
-				{
-					ind=i;
-				}
-				
+				ind=i;
 			}
-			if(ind<0)
+		}
+		if(ind<0)
+		{
+			var valueToPush = new Array();
+			valueToPush[0] =  $scope.items[pos];
+			valueToPush[1] =pos;
+			$scope.choice.push(valueToPush);
+			$scope.checkboxModel[pos]=true;
+		}
+		else
+		{
+			$scope.choice.splice(ind,1);
+			$scope.checkboxModel[pos]=false;
+		}
+		for(var j=0;j<$scope.checkboxModel.length;j++)
+		{
+			if($scope.checkboxModel[j]==true)
 			{
-				var valueToPush = new Array();
-				valueToPush[0] =  $scope.items[pos];
-				valueToPush[1] =pos;
-				$scope.choice.push(valueToPush);
-				$scope.checkboxModel[pos]=true;
-				
-			}
-			else{
-				
-				$scope.choice.splice(ind,1);
-				$scope.checkboxModel[pos]=false;
-			}
-			if($scope.checkboxModel[4]==false && $scope.checkboxModel[5]==false && $scope.checkboxModel[6]==false && $scope.checkboxModel[7]==false)
-			{
-				$scope.btnSelection[2]='inherit';
+				$scope.resetAllFlag=false;
+				break;
 			}
 			else
 			{
-				$scope.btnSelection[2]='#007FFF';
+				$scope.resetAllFlag=true;
 			}
+		}
+		if($scope.checkboxModel[4]==false && $scope.checkboxModel[5]==false && $scope.checkboxModel[6]==false && $scope.checkboxModel[7]==false)
+		{
+			$scope.btnSelection[2]='inherit';
+		}
+		else
+		{
+			$scope.btnSelection[2]='#007FFF';
+		}
+		
+		if($scope.checkboxModel[8]==false && $scope.checkboxModel[9]==false)
+		{
+			$scope.btnSelection[3]='inherit';
+		}
+		else
+		{
+			$scope.btnSelection[3]='#007FFF';
+		}
+		
+		if($scope.checkboxModel[10]==false && $scope.checkboxModel[11]==false && $scope.checkboxModel[12]==false && $scope.checkboxModel[13]==false)
+		{
+			$scope.btnSelection[5]='inherit';
+		}
+		else
+		{
+			$scope.btnSelection[5]='#007FFF';
+		}
 			
-		
-		
 	};
-	 $scope.removeItem = function (x) {
-		 
-		 $scope.checkboxModel[$scope.choice[x][1]]=false;
-        $scope.choice.splice(x, 1);
+	$scope.removeItem = function (x) {
+		$scope.checkboxModel[$scope.choice[x][1]]=false;
+		if($scope.checkboxModel[4]==false && $scope.checkboxModel[5]==false && $scope.checkboxModel[6]==false && $scope.checkboxModel[7]==false)
+		{
+			$scope.btnSelection[2]='inherit';
+		}
+		for(var j=0;j<$scope.checkboxModel.length;j++)
+		{
+			if($scope.checkboxModel[j]==true)
+			{
+				$scope.resetAllFlag=false;
+				break;
+			}
+			else
+			{
+				$scope.resetAllFlag=true;
+			}
+		}
+		if($scope.checkboxModel[4]==false && $scope.checkboxModel[5]==false && $scope.checkboxModel[6]==false && $scope.checkboxModel[7]==false)
+		{
+			$scope.btnSelection[2]='inherit';
+		}
+		else
+		{
+			$scope.btnSelection[2]='#007FFF';
+		}
 		
-    } ;
+		if($scope.checkboxModel[8]==false && $scope.checkboxModel[9]==false)
+		{
+			$scope.btnSelection[3]='inherit';
+		}
+		else
+		{
+			$scope.btnSelection[3]='#007FFF';
+		}
+		
+		if($scope.checkboxModel[10]==false && $scope.checkboxModel[11]==false && $scope.checkboxModel[12]==false && $scope.checkboxModel[13]==false)
+		{
+			$scope.btnSelection[5]='inherit';
+		}
+		else
+		{
+			$scope.btnSelection[5]='#007FFF';
+		}
+        $scope.choice.splice(x, 1);
+	} ;
 
+	$scope.removeResetAll = function () {
+		
+		$scope.resetAllFlag=true;
+		for(var j=0;j<$scope.checkboxModel.length;j++)
+		{
+			if($scope.checkboxModel[j]==true)
+			{
+				$scope.checkboxModel[j]=false;
+			}
+		}
+		for(var k=0;k<$scope.checkboxModel.length;k++)
+		{
+			
+				$scope.btnSelection[k]='inherit';
+			
+		}
+		$scope.choice.length=0;
+	} ;
 	
 	$scope.loadDiff=function(num) {
 		if(num==0)
@@ -197,44 +273,44 @@ app.controller('myCtrl', function($scope) {
   };
 	
     $scope.myFunc = function(id) {
-		 
-
 	if(id==1)
 	{
-		$scope.showMe1 = !$scope.showMe1;
+		$scope.showCollapse[1] = !$scope.showCollapse[1];
 		
-		if($scope.showMe1==false)
+		if($scope.showCollapse[1]==false)
 		{
 			 $scope.boxColor[1]=30;
 			 $scope.btnColor[1]=.01;
-			 $scope.toggleText='  Search...';
+			 $scope.toggleText[1]='  Search... ';
 		}
 		else
 		{
 			$scope.boxColor[1]=.01;
 			 $scope.btnColor[1]=30;
-			$scope.toggleText='Choose vehicle ID';
+			$scope.toggleText[1]='Choose vehicle ID';
 		}
 	}
 	
 	if(id==2)
 	{
-		$scope.showMe2 = !$scope.showMe2;
-		if($scope.showMe2==false)
+		$scope.showCollapse[2] = !$scope.showCollapse[2];
+		if($scope.showCollapse[2]==false)
 		{
 			 $scope.boxColor[2]=30;
 			 $scope.btnColor[2]=.01;
+			 $scope.toggleText[2]='  Search...';
 		}
 		else
 		{
 			$scope.boxColor[2]=.01;
 			 $scope.btnColor[2]=30;
+			 $scope.toggleText[2]='Choose location';
 		}
 	}
 	if(id==3)
 	{
-		$scope.showMe3 = !$scope.showMe3;
-		if($scope.showMe3==false)
+		$scope.showCollapse[3] = !$scope.showCollapse[3];
+		if($scope.showCollapse[3]==false)
 		{
 			 $scope.boxColor[3]=30;
 			 $scope.btnColor[3]=.01;
@@ -247,8 +323,8 @@ app.controller('myCtrl', function($scope) {
 	}
 	if(id==4)
 	{
-		$scope.showMe4 = !$scope.showMe4;
-		if($scope.showMe4==false)
+		$scope.showCollapse[4] = !$scope.showCollapse[4];
+		if($scope.showCollapse[4]==false)
 		{
 			 $scope.boxColor[4]=30;
 			 $scope.btnColor[4]=.01;
@@ -256,14 +332,14 @@ app.controller('myCtrl', function($scope) {
 		else
 		{
 			$scope.boxColor[4]=.01;
-			 $scope.btnColor[4]=30;
+			$scope.btnColor[4]=30;
 		}
 	}	
 	
 	if(id==5)
 	{
-		$scope.showMe5 = !$scope.showMe5;
-		if($scope.showMe5==false)
+		$scope.showCollapse[5] = !$scope.showCollapse[5];
+		if($scope.showCollapse[5]==false)
 		{
 			 $scope.boxColor[5]=30;
 			 $scope.btnColor[5]=.01;
@@ -271,14 +347,14 @@ app.controller('myCtrl', function($scope) {
 		else
 		{
 			$scope.boxColor[5]=.01;
-			 $scope.btnColor[5]=30;
+			$scope.btnColor[5]=30;
 		}
 	}
 	
 	if(id==6)
 	{
-		$scope.showMe6 = !$scope.showMe6;
-		if($scope.showMe6==false)
+		$scope.showCollapse[6] = !$scope.showCollapse[6];
+		if($scope.showCollapse[6]==false)
 		{
 			 $scope.boxColor[6]=30;
 			 $scope.btnColor[6]=.01;
@@ -286,18 +362,15 @@ app.controller('myCtrl', function($scope) {
 		else
 		{
 			$scope.boxColor[6]=.01;
-			 $scope.btnColor[6]=30;
+			$scope.btnColor[6]=30;
 		}
 	}
   };
   
   $scope.loadBody = function(num) {
-		 
-
 	if(num==1)
 	{
-	tpl.contentUrl= 'subcommand_body.html';
-		
+		tpl.contentUrl= 'subcommand_body.html';
 	}
 	
 	if(id==2)
