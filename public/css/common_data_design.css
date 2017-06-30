@@ -70,8 +70,10 @@ border-radius: 50%;
 	width: 60px;
     height: 60px;
 	
-	margin-left:30px;
+	margin-left:20%;
 	
+	margin-bottom:1px;
+	margin-top:5px;
 	float:left;
 }
 
@@ -79,6 +81,20 @@ border-radius: 50%;
 background-color:green;
 }
 
-.notready{
+.ntready{
 background-color:red
+}
+
+.common_data_col4{
+background-image:url("cal1.png");
+background-repeat:no-repeat;
+background-position:center;
+
+}
+
+.common_data_col5{
+background-image:url("world1.png");
+background-repeat:no-repeat;
+background-position:center;
+
 }

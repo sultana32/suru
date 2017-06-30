@@ -12,6 +12,52 @@ width:100%;
  
 }
 
+
+#main_body{
+	padding:20px 15px 50px 0px;
+	width:75%;
+	float:left;
+		background-image:url("plane.png");
+		 background-position:15% 20%;
+		background-repeat:no-repeat;
+		
+}
+
+#wrap1{
+	position: absolute;
+	background: url("fighter.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	height: 100%;
+	width:200px;
+	opacity: 0.5;
+	
+
+}
+#wrap2{
+	position: absolute;
+	height: 100%;
+	
+	z-index: 100;
+	
+
+}
+.tinted-image {
+  
+  width: 300px;
+  height: 200px;
+  
+  background: 
+    /* top, transparent red */ 
+    linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)
+    ),
+    /* bottom, image */
+    url("fighter.jpg");
+}
+
+
 .column_heading_box{
 	width:100%;
 	height: 35px;
@@ -127,6 +173,12 @@ width:100%;
 	border: 1px solid #1c3e59;
 	margin-bottom:15px;
 	border-radius:5px 5px 5px 5px;
+}
+.scs_gps{
+
+background-image:url("location1.png");
+background-position:center right;
+background-repeat:no-repeat;
 }
 
 .cs_col2_circle{

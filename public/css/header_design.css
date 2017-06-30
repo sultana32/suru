@@ -24,6 +24,9 @@
 #user-image-box{
 	height:100%;
 	width:5%;
+	background-image: url("user2.png");
+	background-position:center;
+	background-repeat:no-repeat;
 	background-color:#224a68;
 	border: 2px solid #224a68;
 	border-radius:10px 0px 0px 0px;
@@ -67,7 +70,9 @@
 	background-repeat: no-repeat;
 	float: left;
 	filter: alpha(opacity=100);
-	opacity: 1;
+	background-image: url("wheel2.png");
+	background-position:center;
+	
 }
 #third_bar_box3{
 	width:10%;

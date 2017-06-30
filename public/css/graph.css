@@ -40,6 +40,13 @@ circle {
    fill: transparent;
    stroke-dasharray: 100, 214;
 }
+#yellow-scs-col31{
+  stroke: yellow;
+  stroke-dasharray: 130, 240; /* length of arc, circumference of circle */
+  stroke-width: 8px;
+   fill: transparent;
+  
+}
 #green{
   stroke: #07c33a;
   stroke-dasharray: 20, 294; /* length of arc, circumference of circle */
@@ -66,6 +73,14 @@ circle {
 #red-scs-col3{
   stroke: red;
   stroke-dasharray: 79.5, 240; /* length of arc, circumference of circle */
+  stroke-width: 8px;
+   fill: transparent;
+  
+}
+
+#red-scs-col31{
+  stroke: red;
+  stroke-dasharray: 10, 240; /* length of arc, circumference of circle */
   stroke-width: 8px;
    fill: transparent;
   

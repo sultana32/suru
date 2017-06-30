@@ -103,16 +103,17 @@
 	<form>
 	<div ng-controller="myCtrl">
 	
-		<p class="input-group">
-          <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt1" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+		<p class="input-group" style="background-color:inherit;width:80%;margin:auto">
+          <input type="text" style="background-color:inherit"class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt1" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
           <span class="input-group-btn">
-            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+            <button type="button" style="background-color:inherit;" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar" style="color:#0099CC"></i></button>
           </span>
         </p>
-		 <p class="input-group">
-          <input type="text" class="form-control" uib-datepicker-popup ng-model="dt2" is-open="popup2.opened" datepicker-options="dateOptions2" ng-required="true" close-text="Close" />
+		<br>
+		 <p class="input-group" style="background-color:inherit;width:80%;margin:auto">
+          <input type="text" style="background-color:inherit;" class="form-control" uib-datepicker-popup ng-model="dt2" is-open="popup2.opened" datepicker-options="dateOptions2" ng-required="true" close-text="Close" />
           <span class="input-group-btn">
-            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+            <button type="button" style="background-color:inherit;" class="btn btn-default" ng-click="open2()"><span class ="glyphicon glyphicon-calendar" style="color:#0099CC"></i></button>
           </span>
         </p>
 	</div>	

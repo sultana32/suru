@@ -1,0 +1,29 @@
+/*here goes all of your css styling*/
+
+
+.square{
+	margin: 5px;
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+
+
+#opacity-image-divs-01{
+	position: absolute;
+	background: url("ae.png");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	height: 200px;
+	width: 200px;
+	
+}
+#opacity-image-divs-02{
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	z-index: 100;
+}
+
+
+
